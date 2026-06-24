@@ -1,0 +1,45 @@
+User
+----
+id (PK)
+username
+email
+password
+role
+
+        |
+        |
+        ▼
+
+Complaint
+---------
+id (PK)
+title
+description
+category
+priority
+status
+user_id (FK)
+
+        |
+        |
+        ▼
+
+Ticket
+------
+id (PK)
+complaint_id (FK)
+agent_id (FK)
+status
+resolution_notes
+
+        |
+        |
+        ▼
+
+ResolutionHistory
+----------------
+id (PK)
+ticket_id (FK)
+resolution_note
+resolved_by
+resolved_at
